@@ -3,8 +3,8 @@
     import { useAds } from '$lib/toolkit/googletag.utils';
     import { afterUpdate, beforeUpdate } from 'svelte';
 
-    export let tagId: string;
-    export let unitId: string;
+    export let networkCode: string;
+    export let unitCode: string;
     export let size: SlotSize = [];
     export let sizeMapping: SlotSizeMapping = {};
     export let containerId: string = 'svelte-gpt-ad-slot';
@@ -14,7 +14,7 @@
 
     afterUpdate(() => {
         setTimeout(() => {
-            useAds(tagId, unitId, size, sizeMapping, containerId);
+            useAds(networkCode, unitCode, size, sizeMapping, containerId);
         }, timeout);
     });
 
@@ -29,7 +29,7 @@
 
 <div class="svelte-gpt" {...$$props}>
     <div class="svelte-gpt-slot-wrapper" style:max-height={maxHeight}>
-        <div id='{containerId}-{unitId}' class="svelte-gpt-slot" style:max-height={maxHeight}></div>
+        <div id='{containerId}-{unitCode}' class="svelte-gpt-slot" style:max-height={maxHeight}></div>
     </div>
 </div>
 

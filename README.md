@@ -1,58 +1,69 @@
-# create-svelte
+<div align="center">
+  <h1>Svelte Google Publisher Tags</h1>
+</div>
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+[![NPM: @rigu/svelte-gpt](https://badgen.now.sh/npm/v/@rigu/svelte-gpt)](https://www.npmjs.com/package/@rigu/svelte-gpt)
+[![NPM: @rigu/svelte-gpt](https://badgen.now.sh/npm/dm/@rigu/svelte-gpt)](https://www.npmjs.com/package/@rigu/svelte-gpt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+## Svelte-gpt
 
-## Creating a project
+Svelte library to render google ADS using google gpt (Google Publisher Tags)
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Installation
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```
+npm install @rigu/svelte-gpt
+```
+```
+yarn install @rigu/svelte-gpt
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+### Usage
+In your `app.html` file, in the `<head>` tag insert the script to load the Google Publisher Tags 
+```HTML
+<HEAD>
+...
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+...
+</HEAD>
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+In the `svelte` component you can import the `<Googletag>` component to load ADS that you want.
+```
+<script lang="ts">
+    const networkCode = 123456789;
+    const unitCode = 'My_unit_CODE';
+    const containerId = 'my-gpt-ad-slot-container';
+    const maxHeight = 80;
+    
+    const size = [[728, 60], [900, 60], [1024, 60]];
+    const sizeMapping = {
+        768: [728, 60],
+        1024: [[1024, 60], [900, 60]],
+    };
+</script>
 
-## Building
-
-To build your library:
-
-```bash
-npm run package
+<Googletag {networkCode} {unitCode} {size} {sizeMapping} {containerId} {maxHeight}>
 ```
 
-To create a production version of your showcase app:
+### Properties
+| Prop          | Type   | Default              | Description                                                                                                          |
+|---------------|--------|----------------------|----------------------------------------------------------------------------------------------------------------------|
+| networkCode   | string | undefined            | Your `Network code` from Google Ad Manager                                                                           |
+| unitCode      | string | undefined            | The `Ad unit code` that should be displayed                                                                          |
+| containerId   | string | 'svelte-gpt-ad-slot' | ID attribute for `<DIV>` container where the banner will be injected. <br/> It is used also to define the gpt `Slot` |
+| maxHeight     | number | 60                   | The value for `max-height` CSS style of the container                                                                |
+| size          | number | []                   | List of sizes that are provided for this `Ad unit`                                                                   |
+| sizeMapping   | number | {}                   | Map of the sizes, to create a responsive `Slot`                                                                      |
 
-```bash
-npm run build
+### CSS custom properties (variables)
+
+You can style a component by overriding [the available CSS custom properties]
+```
+<Googletag --max-width="75%" --width="auto" {networkCode} {unitCode}>
 ```
 
-You can preview the production build with `npm run preview`.
+## License
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+[MIT](LICENSE)

@@ -1,6 +1,6 @@
 export const useAds = (
-  tagId: string,
-  unitId: string,
+  networkCode: string,
+  unitCode: string,
   size: googletag.GeneralSize = [],
   sizeMapping: { [key: string]: googletag.GeneralSize } = {},
   containerId: string = 'svelte-gpt-ad-slot'
@@ -13,14 +13,14 @@ export const useAds = (
                 adMapping.addSize([parseInt(breakpoint), 0], sizeMapping[breakpoint]);
             });
             const builtMapping = adMapping.build() as googletag.SizeMappingArray;
-            const adSlot = googletag.defineSlot(`/${tagId}/${unitId}`, size, `${containerId}-${unitId}`) as googletag.Slot;
+            const adSlot = googletag.defineSlot(`/${networkCode}/${unitCode}`, size, `${containerId}-${unitCode}`) as googletag.Slot;
 
             adSlot.defineSizeMapping(builtMapping).addService(googletag.pubads());
             googletag.enableServices();
         });
 
         googletag.cmd.push(function () {
-            googletag.display(`${containerId}${unitId}`);
+            googletag.display(`${containerId}${unitCode}`);
         });
     }
 };
