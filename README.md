@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Svelte Google Publisher Tags</h1>
+  <h1>Svelte component for Google Publisher Tags</h1>
 </div>
 
 [![NPM: @rigu/svelte-gpt](https://badgen.now.sh/npm/v/@rigu/svelte-gpt)](https://www.npmjs.com/package/@rigu/svelte-gpt)
