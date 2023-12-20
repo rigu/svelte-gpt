@@ -1,6 +1,6 @@
 {
 	"name": "@rigu/svelte-gpt",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Svelte library to render google ADS using google gpt",
 	"keywords": [
 		"googletag",
@@ -13,9 +13,9 @@
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/rigu/svelte-googletag/issues"
+		"url": "https://github.com/rigu/svelte-gpt/issues"
 	},
-	"homepage": "https://github.com/rigu/svelte-googletag#readme",
+	"homepage": "https://github.com/rigu/svelte-gpt#readme",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
