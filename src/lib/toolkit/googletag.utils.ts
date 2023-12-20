@@ -20,7 +20,7 @@ export const useAds = (
         });
 
         googletag.cmd.push(function () {
-            googletag.display(`${containerId}${unitCode}`);
+            googletag.display(`${containerId}-${unitCode}`);
         });
     }
 };

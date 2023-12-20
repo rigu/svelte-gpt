@@ -1,3 +1,3 @@
-import Googletag from '$lib/components/Googletag.svelte';
+import Googletag from '$lib/components/GptSlot.svelte';
 
 export { Googletag };

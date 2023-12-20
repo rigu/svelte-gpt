@@ -44,7 +44,7 @@ In the `svelte` component you can import the `<Googletag>` component to load ADS
     };
 </script>
 
-<Googletag {networkCode} {unitCode} {size} {sizeMapping} {containerId} {maxHeight}>
+<GptSlot {networkCode} {unitCode} {size} {sizeMapping} {containerId} {maxHeight} />
 ```
 
 ### Properties
@@ -61,7 +61,7 @@ In the `svelte` component you can import the `<Googletag>` component to load ADS
 
 You can style a component by overriding [the available CSS custom properties]
 ```
-<Googletag --max-width="75%" --width="auto" {networkCode} {unitCode}>
+<GptSlot --max-width="75%" --width="auto" {networkCode} {unitCode} />
 ```
 
 ## License
