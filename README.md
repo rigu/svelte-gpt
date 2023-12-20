@@ -29,7 +29,7 @@ In your `app.html` file, in the `<head>` tag insert the script to load the Googl
 </HEAD>
 ```
 
-In the `svelte` component you can import the `<Googletag>` component to load ADS that you want.
+In the `svelte` component you can import the `<GptSlot />` component to load ADS that you want.
 ```
 <script lang="ts">
     const networkCode = 123456789;
