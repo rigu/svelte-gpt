@@ -2,8 +2,9 @@
   <h1>Svelte component for Google Publisher Tags</h1>
 </div>
 
-[![NPM: @rigu/svelte-gpt](https://badgen.now.sh/npm/v/@rigu/svelte-gpt)](https://www.npmjs.com/package/@rigu/svelte-gpt)
-[![NPM: @rigu/svelte-gpt](https://badgen.now.sh/npm/dm/@rigu/svelte-gpt)](https://www.npmjs.com/package/@rigu/svelte-gpt)
+
+[![npm package](https://img.shields.io/npm/v/@rigu/svelte-gpt.svg?style=flat-square)](https://www.npmjs.com/package/@rigu/svelte-gpt)
+&nbsp;&nbsp;&nbsp;
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Svelte-gpt
