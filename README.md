@@ -3,8 +3,6 @@
 </div>
 
 [![npm package](https://img.shields.io/npm/v/@rigu/svelte-gpt.svg?style=flat-square)](https://www.npmjs.com/package/@rigu/svelte-gpt)
-&nbsp;&nbsp;&nbsp;
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Svelte-gpt
 
@@ -64,6 +62,4 @@ You can style a component by overriding [the available CSS custom properties]
 <GptSlot --max-width="75%" --width="auto" {networkCode} {unitCode} />
 ```
 
-## License
-
-[MIT](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
