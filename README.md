@@ -16,7 +16,7 @@ Svelte library to render google ADS using google gpt (Google Publisher Tags)
 npm install @rigu/svelte-gpt
 ```
 ```
-yarn install @rigu/svelte-gpt
+yarn add @rigu/svelte-gpt
 ```
 
 ### Usage

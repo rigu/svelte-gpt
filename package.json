@@ -3,9 +3,13 @@
 	"version": "1.0.1",
 	"description": "Svelte library to render google ADS using google gpt",
 	"keywords": [
+		"google",
 		"googletag",
-		"Svelte",
-		"SvelteKit"
+		"google publisher tags",
+		"publisher",
+		"tags",
+		"svelte",
+		"sveltekit"
 	],
 	"author": {
 		"name": "Igor AFTENI",
