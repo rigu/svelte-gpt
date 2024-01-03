@@ -2,6 +2,7 @@
   <h1>Svelte component for Google Publisher Tags</h1>
 </div>
 
+
 [![npm package](https://img.shields.io/npm/v/@rigu/svelte-gpt.svg?style=flat-square)](https://www.npmjs.com/package/@rigu/svelte-gpt)
 
 ## Svelte-gpt
