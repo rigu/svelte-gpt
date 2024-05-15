@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { SlotSize, SlotSizeMapping } from '$lib/models/googletag.models';
-	import { useAds } from '$lib/toolkit/googletag.utils';
+	import type { SlotSize, SlotSizeMapping } from '$lib/models/googletag.models.js';
+	import { useAds } from '$lib/toolkit/googletag.utils.js';
 	import { afterUpdate, beforeUpdate } from 'svelte';
 
 	export let networkCode: string;
@@ -21,7 +21,7 @@
 	beforeUpdate(() => {
 		// destroy all ad slots
 		const { googletag } = window;
-		googletag.cmd.push(function () {
+		googletag.cmd.push(function() {
 			googletag.destroySlots();
 		});
 	});
@@ -34,20 +34,20 @@
 </div>
 
 <style>
-	.svelte-gpt {
-		display: var(--display, block);
-		max-width: var(--max-width, 100%);
-		overflow: var(--overflow, hidden);
-		width: var(--width, 100%);
-	}
+    .svelte-gpt {
+        display: var(--display, block);
+        max-width: var(--max-width, 100%);
+        overflow: var(--overflow, hidden);
+        width: var(--width, 100%);
+    }
 
-	.svelte-gpt-slot-wrapper {
-		display: var(--slot-wrapper-display, flex);
-		justify-content: var(--slot-wrapper-justify-content, center);
-		width: var(--slot-wrapper-width, 100%);
-	}
+    .svelte-gpt-slot-wrapper {
+        display: var(--slot-wrapper-display, flex);
+        justify-content: var(--slot-wrapper-justify-content, center);
+        width: var(--slot-wrapper-width, 100%);
+    }
 
-	.svelte-gpt-slot {
-		max-width: var(--slot-max-width, 100%);
-	}
+    .svelte-gpt-slot {
+        max-width: var(--slot-max-width, 100%);
+    }
 </style>
